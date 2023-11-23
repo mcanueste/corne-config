@@ -157,26 +157,14 @@
 // ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 // From node-free
-#define MACRO_CHOOSER3(_1, _2, _3, FUNC, ...) FUNC
-#define ZMK_LAYER(...) MACRO_CHOOSER3(__VA_ARGS__, ZMK_LAYER_3_ARGS, ZMK_LAYER_2_ARGS)(__VA_ARGS__)
-#define ZMK_LAYER_2_ARGS(name, layout) \
+#define ZMK_HELPER_STRINGIFY(x) #x
+#define ZMK_LAYER(name, layout) \
     / { \
         keymap { \
             compatible = "zmk,keymap"; \
             layer_ ## name { \
                 label = ZMK_HELPER_STRINGIFY(name); \
                 bindings = <layout>; \
-            }; \
-        }; \
-    };
-#define ZMK_LAYER_3_ARGS(name, layout, sensors) \
-    / { \
-        keymap { \
-            compatible = "zmk,keymap"; \
-            layer_ ## name { \
-                label = ZMK_HELPER_STRINGIFY(name); \
-                bindings = <layout>; \
-                sensor-bindings = <sensors>; \
             }; \
         }; \
     };
