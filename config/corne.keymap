@@ -5,8 +5,8 @@
 
 // Helpers from node-free-config
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
 #include "../zmk-nodefree-config/helper.h"
+// #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 // Define readable names for none and trans
 #define XXX &none
