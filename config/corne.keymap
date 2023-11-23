@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Helpers from node-free-config
-#include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
-#include "../zmk-nodefree-config/helper.h"
+// #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
+// #include "../zmk-nodefree-config/helper.h"
 // #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 // Define Bluetooth Key Row
@@ -155,6 +155,31 @@
 /* Keymap */
 // Note: I swap CAPS with ESC from software TODO: make caps another ESC instead of swapping
 // ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
+
+// From node-free
+#define MACRO_CHOOSER3(_1, _2, _3, FUNC, ...) FUNC
+#define ZMK_LAYER(...) MACRO_CHOOSER3(__VA_ARGS__, ZMK_LAYER_3_ARGS, ZMK_LAYER_2_ARGS)(__VA_ARGS__)
+#define ZMK_LAYER_2_ARGS(name, layout) \
+    / { \
+        keymap { \
+            compatible = "zmk,keymap"; \
+            layer_ ## name { \
+                label = ZMK_HELPER_STRINGIFY(name); \
+                bindings = <layout>; \
+            }; \
+        }; \
+    };
+#define ZMK_LAYER_3_ARGS(name, layout, sensors) \
+    / { \
+        keymap { \
+            compatible = "zmk,keymap"; \
+            layer_ ## name { \
+                label = ZMK_HELPER_STRINGIFY(name); \
+                bindings = <layout>; \
+                sensor-bindings = <sensors>; \
+            }; \
+        }; \
+    };
 
 ZMK_LAYER(base,
 //╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮ ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
