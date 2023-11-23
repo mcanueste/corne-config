@@ -157,13 +157,13 @@
 // ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 // From node-free
-#define ZMK_HELPER_STRINGIFY(x) #x
+// #define ZMK_HELPER_STRINGIFY(x) #x
 #define ZMK_LAYER(name, layout) \
     / { \
         keymap { \
             compatible = "zmk,keymap"; \
             layer_ ## name { \
-                label = ZMK_HELPER_STRINGIFY(name); \
+                label = #name; \
                 bindings = <layout>; \
             }; \
         }; \
