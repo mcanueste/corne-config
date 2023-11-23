@@ -14,6 +14,7 @@
 #define ZMK_BEHAVIOR_CORE_sticky_key      compatible = "zmk,behavior-sticky-key";      #binding-cells = <1>
 #define ZMK_BEHAVIOR_CORE_tap_dance       compatible = "zmk,behavior-tap-dance";       #binding-cells = <0>
 #define ZMK_BEHAVIOR_CORE_tri_state       compatible = "zmk,behavior-tri-state";       #binding-cells = <0>
+#define TMUX_PREFIX LA(A)
 
 
 #define ZMK_HELPER_STRINGIFY(x) #x
@@ -53,3 +54,11 @@
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
     )
+
+// Create TMUX combos
+// wait-ms = <0>;
+// tap-ms = <1>;
+// #define MAKE_TMUX(NAME, KEY) \
+//     ZMK_BEHAVIOR(NAME, macro, \
+//         bindings = <&macro_tap TMUX_PREFIX>, <&macro_tap KEY>; \
+//     )
