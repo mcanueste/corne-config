@@ -9,16 +9,16 @@
 // #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 // Define Bluetooth Key Row
-#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
+// #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
 
 // Define letters for layers
-#define DEF 0
-#define NAV 1
-#define FN 2
-#define NUM 3
-#define SYS 4
-#define UC 5
-#define MOUSE 6
+// #define DEF 0
+// #define NAV 1
+// #define FN 2
+// #define NUM 3
+// #define SYS 4
+// #define UC 5
+// #define MOUSE 6
 
 // Do not include for now as we are not using
 // #include "combos.dtsi"  // requires layer aliases
