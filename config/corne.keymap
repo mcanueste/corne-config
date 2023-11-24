@@ -64,17 +64,17 @@ MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 // TODO: numword, symword, special chars
 
 ZMK_LAYER(base,
-    &none    &kp Q          &kp W          &kp E           &kp R           &kp T         /* */  &kp Y            &kp U           &kp I           &kp O          &kp P             &none
-    &none    &hml LGUI A    &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G         /* */  &kp H            &hmr RSHFT J    &hmr LCTRL K    &hmr LALT L    &hmr LGUI SEMI    &kp SQT
-    &none    &kp Z          &kp X          &kp C           &kp V           &kp B         /* */  &kp N            &kp M           &kp COMMA       &kp DOT        &kp FSLH          &none
-                                           &kp DEL         &kp ESC         &lt NAV BSPC  /* */  &lt SYM SPACE    &kp RET         &kp TAB
+    &none    &kp Q          &kp W          &kp E           &kp R           &kp T        /* */  &kp Y          &kp U           &kp I           &kp O          &kp P             &none
+    &kp ESC  &hml LGUI A    &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G        /* */  &kp H          &hmr RSHFT J    &hmr LCTRL K    &hmr LALT L    &hmr LGUI SEMI    &kp SQT
+    &none    &kp Z          &kp X          &kp C           &kp V           &kp B        /* */  &kp N          &kp M           &kp COMMA       &kp DOT        &kp FSLH          &none
+                                           &kp DEL         &kp BSPC        &lt NAV TAB  /* */  &lt SYM RET    &kp SPACE       &caps_word
 )
 
 ZMK_LAYER(nav,
-    &none    &none       &none       &none        &none        &none  /* */  &none        &none        &none        &none        &kp K_CUT      &kp INS
-    &none    &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp K_COPY     &kp K_UNDO
-    &none    &none       &none       &none        &none        &none  /* */  &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp K_PASTE    &kp K_REDO
-                                     &none        &none        &none  /* */  &kp SPACE    &kp RET      &kp TAB
+    &none    &none       &none       &none        &none        &none  /* */  &none        &none        &none        &none        &none            &kp INS
+    &none    &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp C_AC_REDO    &none
+    &none    &none       &none       &none        &none        &none  /* */  &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp C_AC_UNDO    &none
+                                     &none        &none        &none  /* */  &kp C_AC_PASTE    &kp C_AC_COPY    &kp C_AC_CUT
 )
 
 ZMK_LAYER(sym,
