@@ -94,13 +94,13 @@ ZMK_LAYER(nav,
                                      &none        &none        &none  /* */  &kp RET     &kp SPACE         &kp TAB
 )
 
-// ZMK_LAYER(sys,
-//     &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
-//     &kp C_BRI_UP      &kp F5    &kp F6     &kp F7          &kp F8          &kp PSCRN   /* */  &none           &kp RSHFT         &kp LCTRL       &kp LALT        &kp LGUI        &none
-//     &kp C_BRI_DN      &kp F1    &kp F2     &kp F3          &kp F4          &none       /* */  &none           &none             &none           &none           &none           &none
-//                                            &kp C_VOL_DN    &kp C_VOL_UP    &kp K_MUTE  /* */  &none           &none             &none
-// )
-//
+ZMK_LAYER(sys,
+    &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
+    &kp C_BRI_UP      &kp F5    &kp F6     &kp F7          &kp F8          &kp PSCRN   /* */  &none           &kp RSHFT         &kp LCTRL       &kp LALT        &kp LGUI        &none
+    &kp C_BRI_DN      &kp F1    &kp F2     &kp F3          &kp F4          &none       /* */  &none           &none             &none           &none           &none           &none
+                                           &kp C_VOL_DN    &kp C_VOL_UP    &kp K_MUTE  /* */  &none           &none             &none
+)
+
 // ZMK_LAYER(win,
 //     &kp PSCRN       &kp LS(LG(N1))    &kp LS(LG(N2))    &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LS(LG(N5))  /* */  &kp LS(LG(N6))    &kp LS(LG(N7))    &kp LS(LG(N8))    &kp LS(LG(N9))    &kp LS(LG(N0))    &kp LS(PSCRN) // sway move to ws
 //     &kp K_CANCEL    &kp LG(N1)        &kp LG(N2)        &kp LG(N3)        &kp LG(N4)        &kp LG(N5)      /* */  &kp LG(N6)        &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &kp LG(N0)        &LS(LG(Q)) // sway switch to ws
