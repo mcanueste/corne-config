@@ -80,13 +80,13 @@ ZMK_LAYER(num,
                                        &none        &none        &none  /* */  &kp RET      &kp N0      &kp COMMA
 )
 
-// ZMK_LAYER(sym,
-//     &kp EXCL     &kp HASH    &kp CARET    &kp DLLR    &kp STAR     &kp QMARK  /* */  &none    &none        &none        &none       &none       &none
-//     &kp TILDE    &kp LPAR    &kp LT       &kp GT      &kp RPAR     &kp GRAVE  /* */  &none    &kp RSHFT    &kp LCTRL    &kp LALT    &kp LGUI    &none
-//     &kp BSLH     &kp LBRC    &kp LBKT     &kp RBKT    &kp RBRC     &kp PIPE   /* */  &none    &none        &none        &none       &none       &none
-//                                           &kp AT      &kp MINUS    &kp EQUAL  /* */  &none    &none        &none
-// )
-//
+ZMK_LAYER(sym,
+    &kp EXCL     &kp HASH    &kp CARET    &kp DLLR    &kp STAR     &kp QMARK  /* */  &none    &none        &none        &none       &none       &none
+    &kp TILDE    &kp LPAR    &kp LT       &kp GT      &kp RPAR     &kp GRAVE  /* */  &none    &kp RSHFT    &kp LCTRL    &kp LALT    &kp LGUI    &none
+    &kp BSLH     &kp LBRC    &kp LBKT     &kp RBKT    &kp RBRC     &kp PIPE   /* */  &none    &none        &none        &none       &none       &none
+                                          &kp AT      &kp MINUS    &kp EQUAL  /* */  &none    &none        &none
+)
+
 // ZMK_LAYER(nav,
 //     &none    &none       &none       &none        &none        &none  /* */  &kp C_PREV  &kp C_CAPTIONS    &kp C_PP     &kp C_NEXT    &kp K_PASTE    &kp K_UNDO
 //     &none    &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp LEFT    &kp DOWN          &kp UP       &kp RIGHT     &kp K_COPY     &kp K_REDO  
