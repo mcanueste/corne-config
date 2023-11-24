@@ -20,12 +20,6 @@
 // &sl {  // sticky-layer config
 //     ignore-modifiers;          // allow chording sticky mods & layers
 // };
-//
-// &lt {  // layer-tap config
-//     flavor = "balanced";
-//     tapping-term-ms = <200>;
-//     quick-tap-ms = <QUICK_TAP_MS>;
-// };
 
 /* Caps-word, num-word and smart-mouse */
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
@@ -54,9 +48,9 @@
 
 /* Keymap */
 #define BASE 0
-#define NUM 1
+#define NAV 1
 #define SYM 2
-#define NAV 3
+#define NUM 3
 #define SYS 4
 #define WIN 5
 
@@ -65,48 +59,51 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 
+// sl WIN
+// caps_word
 // TODO: numword, symword, special chars
+
 ZMK_LAYER(base,
-    &none    &kp Q          &kp W          &kp E           &kp R           &kp T    /* */  &kp Y      &kp U           &kp I           &kp O          &kp P             &none
-    &sl WIN  &hml LGUI A    &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G    /* */  &kp H      &hmr RSHFT J    &hmr LCTRL K    &hmr LALT L    &hmr LGUI SEMI    &kp SQT
-    &none    &kp Z          &kp X          &kp C           &kp V           &kp B    /* */  &kp N      &kp M           &kp COMMA       &kp DOT        &kp FSLH          &caps_word
-                                           &kp DEL         &kp BSPC        &kp ESC  /* */  &kp RET    &kp SPACE       &kp TAB
-)
-
-ZMK_LAYER(num,
-    &none      &none       &none       &none        &none        &none  /* */  &kp FSLH     &kp N7      &kp N8     &kp N9    &kp MINUS    &kp LNLCK
-    &none      &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp PRCNT    &kp N4      &kp N5     &kp N6    &kp EQUAL    &kp CARET
-    &none      &none       &none       &none        &none        &none  /* */  &kp STAR     &kp N1      &kp N2     &kp N3    &kp PLUS     &kp TILDE
-                                       &none        &none        &none  /* */  &kp RET      &kp N0      &kp COMMA
-)
-
-ZMK_LAYER(sym,
-    &kp EXCL     &kp HASH    &kp CARET    &kp DLLR    &kp STAR     &kp QMARK  /* */  &none    &none        &none        &none       &none       &none
-    &kp TILDE    &kp LPAR    &kp LT       &kp GT      &kp RPAR     &kp GRAVE  /* */  &none    &kp RSHFT    &kp LCTRL    &kp LALT    &kp LGUI    &none
-    &kp BSLH     &kp LBRC    &kp LBKT     &kp RBKT    &kp RBRC     &kp PIPE   /* */  &none    &none        &none        &none       &none       &none
-                                          &kp AT      &kp MINUS    &kp EQUAL  /* */  &none    &none        &none
+    &none    &kp Q          &kp W          &kp E           &kp R           &kp T         /* */  &kp Y            &kp U           &kp I           &kp O          &kp P             &none
+    &none    &hml LGUI A    &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G         /* */  &kp H            &hmr RSHFT J    &hmr LCTRL K    &hmr LALT L    &hmr LGUI SEMI    &kp SQT
+    &none    &kp Z          &kp X          &kp C           &kp V           &kp B         /* */  &kp N            &kp M           &kp COMMA       &kp DOT        &kp FSLH          &none
+                                           &kp DEL         &kp ESC         &lt NAV BSPC  /* */  &lt SYM SPACE    &kp RET         &kp TAB
 )
 
 ZMK_LAYER(nav,
-    &none    &none       &none       &none        &none        &none  /* */  &kp C_PREV  &kp C_CAPTIONS    &kp C_PP     &kp C_NEXT    &kp K_PASTE    &kp K_UNDO
-    &none    &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp LEFT    &kp DOWN          &kp UP       &kp RIGHT     &kp K_COPY     &kp K_REDO
-    &none    &none       &none       &none        &none        &none  /* */  &kp HOME    &kp PG_DN         &kp PG_UP    &kp END       &kp K_CUT      &kp INS
-                                     &none        &none        &none  /* */  &kp RET     &kp SPACE         &kp TAB
+    &none    &none       &none       &none        &none        &none  /* */  &none        &none        &none        &none        &kp K_CUT      &kp INS
+    &none    &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp K_COPY     &kp K_UNDO
+    &none    &none       &none       &none        &none        &none  /* */  &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp K_PASTE    &kp K_REDO
+                                     &none        &none        &none  /* */  &kp SPACE    &kp RET      &kp TAB
 )
 
-ZMK_LAYER(sys,
-    &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
-    &kp C_BRI_UP      &kp F5    &kp F6     &kp F7          &kp F8          &kp PSCRN   /* */  &none           &kp RSHFT         &kp LCTRL       &kp LALT        &kp LGUI        &none
-    &kp C_BRI_DN      &kp F1    &kp F2     &kp F3          &kp F4          &none       /* */  &none           &none             &none           &none           &none           &none
-                                           &kp C_VOL_DN    &kp C_VOL_UP    &kp K_MUTE  /* */  &none           &none             &none
+ZMK_LAYER(sym,
+    &kp GRAVE   &kp HASH    &kp CARET    &kp DLLR     &kp STAR     &kp PRCNT  /* */  &none    &none        &none        &none       &none       &none
+    &kp LBKT    &kp LBRC    &kp LPAR     &kp RPAR     &kp RBRC     &kp RBKT   /* */  &none    &kp RSHFT    &kp LCTRL    &kp LALT    &kp LGUI    &none
+    &kp BSLH    &kp AT      &kp PIPE     &kp AMPS     &kp EXCL     &kp PLUS   /* */  &none    &none        &none        &none       &none       &none
+                                         &kp UNDER    &kp MINUS    &kp EQUAL  /* */  &none    &none        &none
 )
 
-ZMK_LAYER(win,
-    &kp PSCRN       &kp LS(LG(N1))    &kp LS(LG(N2))    &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LS(LG(N5))  /* */  &kp LS(LG(N6))    &kp LS(LG(N7))    &kp LS(LG(N8))    &kp LS(LG(N9))    &kp LS(LG(N0))    &kp LS(PSCRN) // sway move to ws
-    &kp K_CANCEL    &kp LG(N1)        &kp LG(N2)        &kp LG(N3)        &kp LG(N4)        &kp LG(N5)      /* */  &kp LG(N6)        &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &kp LG(N0)        &kp LS(LG(Q)) // sway switch to ws
-    &none           &none             &none             &none             &none             &none           /* */  &none             &none             &none             &none             &none             &none
-                                                        &none             &none             &none           /* */  &kp LA(A)         &none             &none
-)
+// ZMK_LAYER(num,
+//     &none      &none       &none       &none        &none        &none  /* */  &kp FSLH     &kp N7      &kp N8     &kp N9    &kp MINUS    &kp LNLCK
+//     &none      &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &none  /* */  &kp PRCNT    &kp N4      &kp N5     &kp N6    &kp EQUAL    &kp CARET
+//     &none      &none       &none       &none        &none        &none  /* */  &kp STAR     &kp N1      &kp N2     &kp N3    &kp PLUS     &kp TILDE
+//                                        &none        &none        &none  /* */  &kp RET      &kp N0      &kp COMMA
+// )
+//
+// ZMK_LAYER(sys,
+//     &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
+//     &kp C_BRI_UP      &kp F5    &kp F6     &kp F7          &kp F8          &kp PSCRN   /* */  &none           &kp RSHFT         &kp LCTRL       &kp LALT        &kp LGUI        &none
+//     &kp C_BRI_DN      &kp F1    &kp F2     &kp F3          &kp F4          &none       /* */  &none           &none             &none           &none           &none           &none
+//                                            &kp C_VOL_DN    &kp C_VOL_UP    &kp K_MUTE  /* */  &none           &none             &none
+// )
+//
+// ZMK_LAYER(win,
+//     &kp PSCRN       &kp LS(LG(N1))    &kp LS(LG(N2))    &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LS(LG(N5))  /* */  &kp LS(LG(N6))    &kp LS(LG(N7))    &kp LS(LG(N8))    &kp LS(LG(N9))    &kp LS(LG(N0))    &kp LS(PSCRN) // sway move to ws
+//     &kp K_CANCEL    &kp LG(N1)        &kp LG(N2)        &kp LG(N3)        &kp LG(N4)        &kp LG(N5)      /* */  &kp LG(N6)        &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &kp LG(N0)        &kp LS(LG(Q)) // sway switch to ws
+//     &none           &none             &none             &none             &none             &none           /* */  &none             &none             &none             &none             &none             &none
+//                                                         &none             &none             &none           /* */  &kp LA(A)         &none             &none
+// )
 
 // ZMK_LAYER(uc,
 // //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
