@@ -61,13 +61,13 @@ MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 
 // sl WIN
 // caps_word
-// TODO: numword, symword, special chars
+// TODO: numword, symword, special chars, caps_word, del
 
 ZMK_LAYER(base,
-    &kp GRAVE    &kp Q          &kp W          &kp E           &kp R           &kp T        /* */  &kp Y          &kp U            &kp I           &kp O          &kp P             &kp MINUS
-    &kp ESC      &hml LGUI A    &hml LALT S    &hml LCTRL D    &hml LSHFT F    &kp G        /* */  &kp H          &hmr RSHFT J     &hmr LCTRL K    &hmr LALT L    &hmr LGUI SEMI    &kp SQT
-    &none        &kp Z          &kp X          &kp C           &kp V           &kp B        /* */  &kp N          &kp M            &kp COMMA       &kp DOT        &kp FSLH          &kp EQUAL
-                                               &kp DEL         &lt NUM BSPC    &lt NAV TAB  /* */  &lt SYS RET    &lt SYM SPACE    &caps_word
+    &kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T        /* */  &kp Y        &kp U          &kp I         &kp O        &kp P           &kp MINUS
+    &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        /* */  &kp H        &hmr RSHFT J   &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
+    &none      &kp Z        &kp X        &kp C         &kp V         &kp B        /* */  &kp N        &kp M          &kp COMMA     &kp DOT      &kp FSLH        &none
+                                         &none         &lt SYM BSPC  &lt NAV TAB  /* */  &lt SYS RET  &lt NUM SPACE  &none
 )
 
 ZMK_LAYER(nav,
@@ -78,17 +78,17 @@ ZMK_LAYER(nav,
 )
 
 ZMK_LAYER(sym,
-    &trans      &trans      &trans       &trans       &trans       &kp PRCNT  /* */  &trans    &trans       &trans       &trans      &trans      &trans
-    &kp BSLH    &kp CARET   &kp LBKT     &kp LBRC     &kp LPAR     &kp PIPE   /* */  &trans    &kp RSHFT    &kp LCTRL    &kp LALT    &kp LGUI    &trans
-    &kp AT      &kp DLLR    &kp RBKT     &kp RBRC     &kp RPAR     &kp AMPS   /* */  &trans    &trans       &trans       &trans      &trans      &trans
-                                         &kp HASH     &kp STAR     &kp EXCL   /* */  &trans    &none        &trans
+    &trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  /* */  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp EQUAL
+    &trans  &trans    &trans    &trans    &trans    &trans     /* */  &trans     &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &kp BSLH
+    &trans  &trans    &trans    &trans    &trans    &trans     /* */  &trans     &trans    &trans    &trans    &trans    &trans
+                                &trans    &none     &trans     /* */  &trans     &trans    &trans
 )
 
 ZMK_LAYER(num,
-    &trans      &trans      &trans      &trans       &trans       &trans  /* */  &kp FSLH     &kp N7      &kp N8     &kp N9    &kp MINUS    &kp LNLCK
-    &trans      &kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &trans  /* */  &kp PRCNT    &kp N4      &kp N5     &kp N6    &kp EQUAL    &kp CARET
-    &trans      &trans      &trans      &trans       &trans       &trans  /* */  &kp STAR     &kp N1      &kp N2     &kp N3    &kp PLUS     &kp TILDE
-                                        &trans       &none        &trans  /* */  &kp RET      &kp N0      &kp COMMA
+    &trans  &kp KP_N1      &kp KP_N2      &kp KP_N2      &kp KP_N4      &kp KP_N5      /* */  &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0   &trans
+    &trans  &kp LG(N1)     &kp LG(N2)     &kp LG(N3)     &kp LG(N4)     &kp LG(N5)     /* */  &trans     &trans     &trans     &trans     &trans      &trans 
+    &trans  &kp LS(LG(N1)) &kp LS(LG(N2)) &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LS(LG(N5)) /* */  &trans     &trans     &trans     &trans     &trans      &trans 
+                                          &trans         &trans         &trans         /* */  &trans     &none      &trans                                      
 )
 
 ZMK_LAYER(sys,
