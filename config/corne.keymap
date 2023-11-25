@@ -56,17 +56,17 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 // Home row layer switches
-MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand HRMs
+// MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand HRMs
+// MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 // sl WIN
 // caps_word
 // TODO: numword, symword, special chars, caps_word, del
 ZMK_LAYER(base,
-    &kp GRAVE  &kp Q        &kp W        &kp E         &kp R          &kp T     /* */  &kp Y      &kp U         &kp I         &kp O        &kp P           &kp MINUS
-    &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F   &kp G     /* */  &kp H      &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-    &kp BSLH   &kp Z        &kp X        &kp C         &kp V          &kp B     /* */  &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp EQUAL
-                                         &kp DEL       &hll NUM BSPC  &kp TAB   /* */  &kp RET    &hlr SYM SPACE  &none
+    &kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T     /* */  &kp Y      &kp U         &kp I         &kp O        &kp P           &kp MINUS
+    &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G     /* */  &kp H      &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
+    &kp BSLH   &kp Z        &kp X        &kp C         &kp V         &kp B     /* */  &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp EQUAL
+                                         &kp DEL       &lt NUM BSPC  &kp TAB   /* */  &kp RET    &lt SYM SPACE  &none
 )
 
 ZMK_LAYER(num,
@@ -80,7 +80,7 @@ ZMK_LAYER(num,
     &trans  &kp LBKT   &kp LBRC  &kp RBRC  &kp RBKT  &trans     /* */  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  /* */  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   /* */  &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans    &trans    &trans     /* */  &trans  &trans  &trans
+                                 &trans    &trans    &trans     /* */  &trans  &none  &trans
 )
 
 //
