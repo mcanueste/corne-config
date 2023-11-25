@@ -4,7 +4,7 @@
 // Aliases
 #define QUICK_TAP_MS 175
 #define HOMEROW_TAPPING_TERM_MS 280
-#define THUMB_TAPPING_TERM_MS 200
+#define THUMB_TAPPING_TERM_MS 180
 #define TMUX_PREFIX LA(A)
 
 #define ZMK_BEHAVIOR_CORE_caps_word       compatible = "zmk,behavior-caps-word";       #binding-cells = <0>
@@ -51,7 +51,7 @@
         flavor = "balanced"; \
         tapping-term-ms = <HOMEROW_TAPPING_TERM_MS>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
+        require-prior-idle-ms = <125>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
