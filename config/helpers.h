@@ -4,7 +4,7 @@
 // Aliases
 #define QUICK_TAP_MS 175
 #define HOMEROW_TAPPING_TERM_MS 280
-#define THUMB_TAPPING_TERM_MS 175
+#define THUMB_TAPPING_TERM_MS 200
 #define TMUX_PREFIX LA(A)
 
 #define ZMK_BEHAVIOR_CORE_caps_word       compatible = "zmk,behavior-caps-word";       #binding-cells = <0>
