@@ -5,7 +5,7 @@
 #define QUICK_TAP_MS 175
 #define HOMEROW_TAPPING_TERM_MS 280
 #define THUMB_TAPPING_TERM_MS 200
-#define TMUX_PREFIX LA(A)
+// #define TMUX_PREFIX LA(A)
 
 #define ZMK_BEHAVIOR_CORE_caps_word       compatible = "zmk,behavior-caps-word";       #binding-cells = <0>
 #define ZMK_BEHAVIOR_CORE_dynamic_macro   compatible = "zmk,behavior-dynamic-macro";   #binding-cells = <1>
@@ -62,6 +62,15 @@
     tapping-term-ms = <THUMB_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
+
+// &sk {  // sticky-key config
+//     release-after-ms = <900>;  // release after 0.6s
+//     quick-release;             // no double capitalization when rolling keys
+// };
+//
+// &sl {  // sticky-layer config
+//     ignore-modifiers;          // allow chording sticky mods & layers
+// };
 
 // Create TMUX combos
 // wait-ms = <0>;

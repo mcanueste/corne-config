@@ -10,17 +10,6 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right hand
 #define THUMBS LH0 LH1 LH2 RH0 RH1 RH2                                                 // thumbs
 
-/* Global settings */
-//
-// &sk {  // sticky-key config
-//     release-after-ms = <900>;  // release after 0.6s
-//     quick-release;             // no double capitalization when rolling keys
-// };
-//
-// &sl {  // sticky-layer config
-//     ignore-modifiers;          // allow chording sticky mods & layers
-// };
-
 /* Caps-word, num-word and smart-mouse */
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 // #define SMART_NUM &smart_num NUM 0
@@ -55,12 +44,11 @@
 // Home row modes
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+
 // Home row layer switches
 // MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand HRMs
 // MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-// sl WIN
-// caps_word
 // TODO: numword, symword, special chars, caps_word, del
 ZMK_LAYER(base,
     &kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T     /* */  &kp Y      &kp U         &kp I         &kp O        &kp P           &kp MINUS
@@ -80,10 +68,9 @@ ZMK_LAYER(num,
     &trans  &kp LBKT   &kp LBRC  &kp RBRC  &kp RBKT  &trans     /* */  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  /* */  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   /* */  &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans    &trans    &trans     /* */  &trans  &none  &trans
+                                 &trans    &trans    &trans     /* */  &trans  &none   &trans
 )
 
-//
 // ZMK_LAYER(sys,
 //     &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
 //     &kp C_BRI_UP      &kp F5    &kp F6     &kp F7          &kp F8          &kp PSCRN   /* */  &none           &kp RSHFT         &kp LCTRL       &kp LALT        &kp LGUI        &none
