@@ -66,17 +66,10 @@ ZMK_LAYER(num,
 
 ZMK_LAYER(sym,
     &trans  &kp LBKT   &kp LBRC  &kp RBRC  &kp RBKT  &trans     /* */  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  /* */  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   /* */  &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &kp CARET  &kp LPAR  &kp RPAR  &kp DLLR  &kp PRCNT  /* */  &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &kp HASH   &kp AT    &kp AMPS  &kp STAR  &kp EXCL   /* */  &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans    &trans    &trans     /* */  &trans  &none   &trans
 )
-
-// ZMK_LAYER(sym,
-//     &trans  &kp LBKT   &kp LBRC  &kp RBRC  &kp RBKT  &trans     /* */  &trans  &trans  &trans  &trans  &trans  &trans
-//     &trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  /* */  &trans  &trans  &trans  &trans  &trans  &trans
-//     &trans  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   /* */  &trans  &trans  &trans  &trans  &trans  &trans
-//                                  &trans    &trans    &trans     /* */  &trans  &none   &trans
-// )
 
 // ZMK_LAYER(sys,
 //     &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
