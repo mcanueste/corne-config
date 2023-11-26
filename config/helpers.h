@@ -51,7 +51,7 @@
         flavor = "balanced"; \
         tapping-term-ms = <HOMEROW_TAPPING_TERM_MS>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <120>; \
+        require-prior-idle-ms = <110>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
