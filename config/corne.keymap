@@ -46,15 +46,15 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 // Home row layer switches
-// MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand HRMs
-// MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand HRMs
+MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand HRMs
+MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 // TODO: numword, symword, special chars, caps_word, del
 ZMK_LAYER(base,
-    &kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T     /* */  &kp Y      &kp U         &kp I         &kp O        &kp P           &kp MINUS
-    &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G     /* */  &kp H      &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-    &kp BSLH   &kp Z        &kp X        &kp C         &kp V         &kp B     /* */  &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp EQUAL
-                                         &kp DEL       &lt NUM BSPC  &kp TAB   /* */  &kp RET    &lt SYM SPACE  &none
+    &kp GRAVE  &kp Q        &kp W        &kp E         &kp R         &kp T     /* */  &kp Y      &kp U          &kp I         &kp O        &kp P           &kp MINUS
+    &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G     /* */  &kp H      &hmr RSHFT J   &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
+    &kp BSLH   &kp Z        &kp X        &kp C         &kp V         &kp B     /* */  &kp N      &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp EQUAL
+                                         &kp DEL       &hll NUM BSPC &kp TAB   /* */  &kp RET    &hlr SYM SPACE &none
 )
 
 ZMK_LAYER(num,
@@ -70,7 +70,6 @@ ZMK_LAYER(sym,
     &trans  &kp HASH   &kp AT    &kp AMPS  &kp STAR  &kp EXCL   /* */  &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans    &trans    &trans     /* */  &trans  &none   &trans
 )
-
 // ZMK_LAYER(sys,
 //     &kp C_BKLT_TOG    &kp F9    &kp F10    &kp F11         &kp F12         &none       /* */  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
 //     &kp C_BRI_UP      &kp F5    &kp F6     &kp F7          &kp F8          &kp PSCRN   /* */  &none           &kp RSHFT         &kp LCTRL       &kp LALT        &kp LGUI        &none
