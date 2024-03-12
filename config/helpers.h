@@ -4,9 +4,10 @@
 #include "./corne_key_positions.h"
 
 // Aliases
-#define QUICK_TAP_MS 150
+#define QUICK_TAP_MS 175
+#define PRIOR_IDLE_MS 150
 #define HOMEROW_TAPPING_TERM_MS 280
-#define THUMB_TAPPING_TERM_MS 175
+#define THUMB_TAPPING_TERM_MS 180
 
 #define ZMK_BEHAVIOR_CORE_caps_word       compatible = "zmk,behavior-caps-word";       #binding-cells = <0>
 #define ZMK_BEHAVIOR_CORE_dynamic_macro   compatible = "zmk,behavior-dynamic-macro";   #binding-cells = <1>
@@ -20,13 +21,8 @@
 #define ZMK_BEHAVIOR_CORE_tap_dance       compatible = "zmk,behavior-tap-dance";       #binding-cells = <0>
 #define ZMK_BEHAVIOR_CORE_tri_state       compatible = "zmk,behavior-tri-state";       #binding-cells = <0>
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5 // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right hand
-#define THUMBS LH0 LH1 LH2 RH0 RH1 RH2                                                 // thumbs
-
-#define ZMK_HELPER_STRINGIFY(x) #x
-
 // Create ZMK behavior
+#define ZMK_HELPER_STRINGIFY(x) #x
 #define ZMK_BEHAVIOR(name, type, ...) \
     / { \
         behaviors { \
@@ -56,7 +52,7 @@
         flavor = "balanced"; \
         tapping-term-ms = <HOMEROW_TAPPING_TERM_MS>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <50>; \
+        require-prior-idle-ms = <PRIOR_IDLE_MS>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \

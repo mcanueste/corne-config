@@ -13,36 +13,36 @@
 
 // TODO: numword, symword, special chars, caps_word, del
 ZMK_LAYER(base,
-  &kp GRAVE &kp Q       &kp W       &kp E        &kp R        &kp T       /* */ &kp Y   &kp U         &kp I        &kp O       &kp P          &kp MINUS
-  &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G       /* */ &kp H   &hmr RSHFT J  &hmr LCTRL K &hmr LALT L &hmr LGUI SEMI &kp SQT
-  &kp BSLH  &kp Z       &kp X       &kp C        &kp V        &kp B       /* */ &kp N   &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp EQUAL
-                                    &lt SYS DEL  &lt NUM BSPC &lt NAV TAB /* */ &kp RET &lt SYM SPACE &lt SYS ESC
+  &kp GRAVE &kp Q       &kp W       &kp E        &kp R        &kp T       /* */ &kp Y       &kp U         &kp I        &kp O       &kp P          &kp MINUS
+  &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G       /* */ &kp H       &hmr RSHFT J  &hmr LCTRL K &hmr LALT L &hmr LGUI SEMI &kp SQT
+  &kp BSLH  &kp Z       &kp X       &kp C        &kp V        &kp B       /* */ &kp N       &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp EQUAL
+                                    &kp DEL      &lt NUM BSPC &lt NAV TAB /* */ &lt SYS RET &lt SYM SPACE &caps_word
 )
- 
+
 ZMK_LAYER(num,
-  &trans &trans &trans &trans &trans &trans /* */ &trans &kp N7 &kp N8 &kp N9 &trans  &trans
-  &trans &trans &trans &trans &trans &trans /* */ &trans &kp N4 &kp N5 &kp N6 &trans  &trans
-  &trans &trans &trans &trans &trans &trans /* */ &kp N0 &kp N1 &kp N2 &kp N3 &trans  &trans
-                       &trans &none  &trans /* */ &trans &trans &trans
+  &none &none    &none    &none     &none     &none /* */ &kp PRCNT &kp N7    &kp N8 &kp N9 &kp MINUS &kp EXCL
+  &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none /* */ &kp N0    &kp N4    &kp N5 &kp N6 &kp STAR  &kp LPAR
+  &none &none    &none    &none     &none     &none /* */ &kp EQUAL &kp N1    &kp N2 &kp N3 &kp FSLH  &kp RPAR
+                          &none     &none     &none /* */ &kp RET   &lt SPACE &none
 )
 
 ZMK_LAYER(sym,
-  &trans &kp LBKT  &kp LBRC &kp RBRC &kp RBKT &trans    /* */ &trans &trans &trans &trans &trans &trans
-  &trans &kp CARET &kp LPAR &kp RPAR &kp DLLR &kp PRCNT /* */ &trans &trans &trans &trans &trans &trans
-  &trans &kp HASH  &kp AT   &kp AMPS &kp STAR &kp EXCL  /* */ &trans &trans &trans &trans &trans &trans
-                            &trans   &trans   &trans    /* */ &trans &none  &trans
+  &none &kp LBKT  &kp LBRC &kp RBRC &kp RBKT &none     /* */ &none &none     &none     &none    &none    &none
+  &none &kp CARET &kp LPAR &kp RPAR &kp DLLR &kp PRCNT /* */ &none &kp RSHFT &kp LCTRL &kp LALT &kp LGUI &none
+  &none &kp HASH  &kp AT   &kp AMPS &kp STAR &kp EXCL  /* */ &none &none     &none     &none    &none    &none
+                           &kp DEL  &kp BSPC &kp TAB   /* */ &none &none     &none
 )
 
 ZMK_LAYER(nav,
-  &trans &trans &trans &trans &trans &trans /* */ &trans &kp HOME  &kp UP    &kp END   &kp PG_UP &trans
-  &trans &trans &trans &trans &trans &trans /* */ &trans &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_DN &trans
-  &trans &trans &trans &trans &trans &trans /* */ &trans &kp LC(C) &kp LC(X) &kp LC(V) &kp LC(Z) &trans
-                       &trans &trans &none  /* */ &trans &trans    &trans
+  &none &none    &none    &none     &none     &none /* */ &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none &none
+  &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none /* */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none &none
+  &none &none    &none    &none     &none     &none /* */ &kp LC(C) &kp LC(X) &kp LC(V) &kp LC(Z) &none &none   
+                          &none     &none     &none /* */ &kp RET   &lt SPACE &none
 )
 
 ZMK_LAYER(sys,
- &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 /* */ &trans &trans      &trans &trans &trans &trans
- &trans     &trans       &trans       &trans       &trans       &trans       /* */ &trans &trans      &trans &trans &trans &trans
- &trans     &trans       &trans       &trans       &trans       &trans       /* */ &trans &trans      &trans &trans &trans &trans
-                                      &none        &bootloader  &trans       /* */ &trans &bootloader &none
+ &none &none &none &none &none &none /* */ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+ &none &none &none &none &none &none /* */ &none      &none        &none        &none        &none        &none
+ &none &none &none &none &none &none /* */ &none      &none        &none        &none        &none        &none
+                   &none &none &none /* */ &none      &none        &none
 )
