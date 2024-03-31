@@ -13,31 +13,31 @@
 
 // TODO: numword, symword, special chars, caps_word, del
 ZMK_LAYER(base,
-  &kp GRAVE &kp Q       &kp W       &kp E        &kp R        &kp T       /* */ &kp Y       &kp U         &kp I        &kp O       &kp P          &kp MINUS
-  &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G       /* */ &kp H       &hmr RSHFT J  &hmr LCTRL K &hmr LALT L &hmr LGUI SEMI &kp SQT
-  &kp BSLH  &kp Z       &kp X       &kp C        &kp V        &kp B       /* */ &kp N       &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp EQUAL
-                                    &kp DEL      &lt NUM BSPC &lt NAV TAB /* */ &lt SYS RET &lt SYM SPACE &caps_word
+  &kp GRAVE &kp Q       &kp W       &kp E        &kp R        &kp T        /* */ &kp Y         &kp U        &kp I        &kp O       &kp P          &kp MINUS
+  &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G        /* */ &kp H         &hmr RSHFT J &hmr LCTRL K &hmr LALT L &hmr LGUI SEMI &kp SQT
+  &kp BSLH  &kp Z       &kp X       &kp C        &kp V        &kp B        /* */ &kp N         &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp EQUAL
+                                    &kp DEL      &lt NAV TAB  &lt NUM BSPC /* */ &lt SYM SPACE &lt SYS RET  &caps_word
 )
 
 ZMK_LAYER(num,
-  &none &none    &none    &none     &none     &none /* */ &kp PRCNT &kp N7    &kp N8 &kp N9 &kp MINUS &kp EXCL
-  &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none /* */ &kp N0    &kp N4    &kp N5 &kp N6 &kp STAR  &kp LPAR
-  &none &none    &none    &none     &none     &none /* */ &kp EQUAL &kp N1    &kp N2 &kp N3 &kp FSLH  &kp RPAR
-                          &none     &none     &none /* */ &kp RET   &lt SPACE &none
+  &none &none    &none    &none     &none     &none /* */ &kp PRCNT &kp N7  &kp N8 &kp N9 &kp MINUS &kp EXCL
+  &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none /* */ &kp EQUAL &kp N4  &kp N5 &kp N6 &kp STAR  &kp LPAR
+  &none &none    &none    &none     &none     &none /* */ &kp N0    &kp N1  &kp N2 &kp N3 &kp FSLH  &kp RPAR
+                          &none     &none     &none /* */ &kp SPACE &kp RET &none
 )
 
 ZMK_LAYER(sym,
   &none &kp LBKT  &kp LBRC &kp RBRC &kp RBKT &none     /* */ &none &none     &none     &none    &none    &none
   &none &kp CARET &kp LPAR &kp RPAR &kp DLLR &kp PRCNT /* */ &none &kp RSHFT &kp LCTRL &kp LALT &kp LGUI &none
   &none &kp HASH  &kp AT   &kp AMPS &kp STAR &kp EXCL  /* */ &none &none     &none     &none    &none    &none
-                           &kp DEL  &kp BSPC &kp TAB   /* */ &none &none     &none
+                           &kp DEL  &kp TAB  &kp BSPC  /* */ &none &none     &none
 )
 
 ZMK_LAYER(nav,
   &none &none    &none    &none     &none     &none /* */ &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none &none
   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none /* */ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none &none
   &none &none    &none    &none     &none     &none /* */ &kp LC(C) &kp LC(X) &kp LC(V) &kp LC(Z) &none &none   
-                          &none     &none     &none /* */ &kp RET   &lt SPACE &none
+                          &none     &none     &none /* */ &kp SPACE &kp RET   &none
 )
 
 ZMK_LAYER(sys,

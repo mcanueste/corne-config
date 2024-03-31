@@ -2,11 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # - name: mcanueste
-    #   url-base: https://github.com/mcanueste
   projects:
     - name: zmk
-      # remote: mcanueste
       remote: zmkfirmware
       revision: main
       import: app/west.yml
