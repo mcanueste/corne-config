@@ -5,7 +5,7 @@
 
 // Aliases
 #define QUICK_TAP_MS 175
-#define PRIOR_IDLE_MS 140
+#define PRIOR_IDLE_MS 130
 #define HOMEROW_TAPPING_TERM_MS 280
 #define THUMB_TAPPING_TERM_MS 180
 
