@@ -4,7 +4,7 @@
 #include "./corne_key_positions.h"
 
 // Aliases
-#define QUICK_TAP_MS 175
+#define QUICK_TAP_MS 150
 #define PRIOR_IDLE_MS 100
 #define HOMEROW_TAPPING_TERM_MS 280
 #define THUMB_TAPPING_TERM_MS 180
