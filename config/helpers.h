@@ -6,7 +6,7 @@
 // Aliases
 #define QUICK_TAP_MS 150
 #define PRIOR_IDLE_MS 100
-#define HOMEROW_TAPPING_TERM_MS 280
+#define HOMEROW_TAPPING_TERM_MS 200
 #define THUMB_TAPPING_TERM_MS 180
 
 #define ZMK_BEHAVIOR_CORE_caps_word       compatible = "zmk,behavior-caps-word";       #binding-cells = <0>
