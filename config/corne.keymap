@@ -12,22 +12,22 @@
 
 // TODO: numword, symword, special chars
 ZMK_LAYER(base,
-  &kp MINUS &kp Q       &kp W       &kp E        &kp R        &kp T        /* */ &kp Y         &kp U        &kp I            &kp O         &kp P          &kp LBKT
+  &kp EQUAL &kp Q       &kp W       &kp E        &kp R        &kp T        /* */ &kp Y         &kp U        &kp I            &kp O         &kp P          &kp MINUS
   &kp ESC   &kp A       &kp S       &kp D        &kp F        &kp G        /* */ &kp H         &kp J        &kp K            &kp L         &kp SEMI       &kp SQT
-  &kp EQUAL &hml LGUI Z &hml LALT X &hml LCTRL C &hml LSHFT V &kp B        /* */ &kp N         &hmr RSHFT M &hmr LCTRL COMMA &hmr LALT DOT &hmr LGUI FSLH &kp RBKT
+  &kp LBKT  &hml LGUI Z &hml LALT X &hml LCTRL C &hml LSHFT V &kp B        /* */ &kp N         &hmr RSHFT M &hmr LCTRL COMMA &hmr LALT DOT &hmr LGUI FSLH &kp RBKT
                                     &kp DEL      &lt SYS TAB  &lt NAV BSPC /* */ &lt NS SPACE  &kp RET      &caps_word
 )
 
 ZMK_LAYER(ns,
-  &none &none  &kp N7 &kp N8 &kp N9 &none /* */ &kp AT    &kp CARET &kp DLLR  &kp TILDE &kp GRAVE &kp EXCL
-  &none &none  &kp N4 &kp N5 &kp N6 &none /* */ &kp PRCNT &kp LPAR  &kp RPAR  &kp HASH  &kp STAR  &kp AMPS
-  &none &kp N0 &kp N1 &kp N2 &kp N3 &none /* */ &kp BSLH  &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI  &kp PIPE
-                      &none  &none  &none /* */ &none &none &none
+  &none &kp EXCL &kp N7 &kp N8   &kp N9    &none     /* */ &none &kp CARET &kp DLLR  &kp AMPS &kp PIPE &none
+  &none &kp AT   &kp N4 &kp N5   &kp N6    &none     /* */ &none &kp LPAR  &kp RPAR  &kp HASH &kp STAR &none
+  &none &kp N0   &kp N1 &kp N2   &kp N3    &none     /* */ &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &none
+                        &kp BSLH &kp GRAVE &kp PRCNT /* */ &none &none     &none
 )
 
 ZMK_LAYER(nav,
-  &kp LG(N0) &kp LG(N8) &kp LG(N7) &kp LG(N6) &kp LG(N5) &none /* */ &kp LC(LEFT) &kp LC(DOWN)  &kp LC(UP)    &kp LC(RIGHT) &kp LC(X) &none
-  &kp LG(N9) &kp LG(N4) &kp LG(N3) &kp LG(N2) &kp LG(N1) &none /* */ &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     &kp LC(C) &kp LS(LC(C))
+  &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0) &none /* */ &kp LC(LEFT) &kp LC(DOWN)  &kp LC(UP)    &kp LC(RIGHT) &kp LC(X) &none
+  &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5) &none /* */ &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     &kp LC(C) &kp LS(LC(C))
   &sk LSHFT  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none /* */ &kp HOME     &kp PG_DN     &kp PG_UP     &kp END       &kp LC(V) &kp LS(LC(V))
                                    &none      &none      &none /* */ &none        &none         &none
 )
@@ -38,4 +38,3 @@ ZMK_LAYER(sys,
  &bt BT_SEL 0 &kp LGUI      &kp LALT               &kp LCTRL            &kp LSHFT            &none /* */ &none &kp F1 &kp F2 &kp F3 &kp F10 &none
                                                    &bt BT_CLR           &none                &none /* */ &none &none  &none
 )
-
