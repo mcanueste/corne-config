@@ -26,10 +26,10 @@ ZMK_LAYER(ns,
 )
 
 ZMK_LAYER(nav,
-  &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0) &none /* */ &kp LC(LEFT) &kp LC(DOWN)  &kp LC(UP)    &kp LC(RIGHT) &kp LC(X) &none
-  &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5) &none /* */ &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     &kp LC(C) &kp LS(LC(C))
-  &sk LSHFT  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none /* */ &kp HOME     &kp PG_DN     &kp PG_UP     &kp END       &kp LC(V) &kp LS(LC(V))
-                                   &none      &none      &none /* */ &none        &none         &none
+  &none &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0) /* */ &kp LC(LEFT) &kp LC(DOWN)  &kp LC(UP)    &kp LC(RIGHT) &kp LC(X) &none
+  &none &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5) /* */ &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT     &kp LC(C) &kp LS(LC(C))
+  &none &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &sk LSHFT  /* */ &kp HOME     &kp PG_DN     &kp PG_UP     &kp END       &kp LC(V) &kp LS(LC(V))
+                              &none      &none      &none      /* */ &none        &none         &none
 )
 
 ZMK_LAYER(sys,
