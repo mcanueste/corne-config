@@ -18,10 +18,10 @@
   keymap {
     compatible = "zmk,keymap";
     default_layer {bindings = <
-        XXX     &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    XXX
-        &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-        XXX     &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH XXX
-                         XXX &kp TAB &kp BSPC   &kp SPACE &kp RET XXX
+        XXX &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    XXX
+        XXX &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SQT  XXX
+        XXX &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH XXX
+                     XXX &kp ESC &kp BSPC   &kp SPACE &kp RET XXX
       >;
     };
   };
